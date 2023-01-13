@@ -14,15 +14,15 @@ function App() {
   };
 
   return (
-    <div className="App">
-      <h1 className="text-center m-4">Markdown Editor</h1>
-          <div className="flex m-2">
-            <h2 className="text-center w-2/4">Markdown Input </h2>
-            <h2 className="text-center w-2/4">Preview</h2>
+    <div>
+      <h1>Markdown Editor</h1>
+          <div>
+            <h2>Markdown Input </h2>
+            <h2>Preview</h2>
           </div>
-          <div className="flex">
-            <textarea className="w-2/4 m-4 bg-green-300" value={markdown} onChange={(e) => {updateMarkdownState(e.target.value)}} style={textAreaStyles}></textarea>
-            <div className="w-2/4 m-4 bg-blue-300" style={textAreaStyles}>
+          <div>
+            <textarea value={markdown} onChange={(e) => {updateMarkdownState(e.target.value)}} ></textarea>
+            <div>
               <div dangerouslySetInnerHTML = {{__html: marked(markdown)}} ></div>
             </div>
           </div>
